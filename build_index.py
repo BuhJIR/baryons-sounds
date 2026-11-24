@@ -8,7 +8,7 @@ PACKS = {
     'claude-synth': {'name': 'Claude · синтез', 'about': 'синтез в synth.py: механизм Glock, кольцо о титан'},
 }
 SLOTS = {'incoming': 'обращение к пульту', 'hold': 'удержание фона', 'rec_press': 'тест: внимание',
-         'rec_release': 'тест: пошёл', 'rec_stop': 'тест: конец', 'loading': 'загрузка / смена сессии'}
+         'rec_release': 'тест: пошёл', 'rec_stop': 'тест: конец', 'loading': 'загрузка / смена сессии', 'theme': 'доступна тема'}
 
 def probe(p):
     d = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', p], capture_output=True, text=True).stdout or 0)
